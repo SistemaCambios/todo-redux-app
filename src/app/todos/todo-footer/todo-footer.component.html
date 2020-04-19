@@ -1,0 +1,9 @@
+<footer class="footer">
+    <span class="todo-count"><strong>{{faltantes}}</strong> Tareas faltantes</span>
+    <ul class="filters">
+      <li *ngFor="let item of filtros" (click)="cambioEstado(item)">
+        <a [class.selected]="item === estadoInicial"  href="#/">{{item}}</a>
+      </li>       
+    </ul>
+    <button class="clear-completed" (click)="borrarCompletado()">Borrar completados</button>
+  </footer>
